@@ -223,10 +223,6 @@ data_set.append({
 }
 )
 
-
-
-
-
 index = index + 1
 attribute_attribute_car_url=index
 data_set.append({
@@ -243,6 +239,29 @@ data_set.append({
     "is_variant_only": False,
     "visible_in_storefront": True,
     "filterable_in_storefront": False,
+    "filterable_in_dashboard": False,
+    "storefront_search_position": 0,
+    "available_in_grid": True
+}
+}
+)
+
+index = index + 1
+attribute_attribute_condition=index
+data_set.append({
+    "model": "attribute.attribute",
+    "pk": attribute_attribute_condition,
+    "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "slug": "condition",
+    "name": "Κατάσταση",
+    "type": "product-type",
+    "input_type": "dropdown",
+    "value_required": True,
+    "is_variant_only": False,
+    "visible_in_storefront": True,
+    "filterable_in_storefront": True,
     "filterable_in_dashboard": False,
     "storefront_search_position": 0,
     "available_in_grid": True
@@ -294,6 +313,17 @@ data_set.append({
     "product_type": product_producttype
 }})
 
+index = index + 1
+product_attributeproduct_condition=index
+data_set.append({
+"model": "attribute.attributeproduct",
+"pk": product_attributeproduct_condition,
+"fields": {
+    "sort_order": None,
+    "attribute": attribute_attribute_condition,
+    "product_type": product_producttype
+}})
+
 # create attributes values
 fits_index=[]
 for i in fits:
@@ -330,7 +360,34 @@ for i in manufacturer:
     }
     )
 
-
+index = index + 1
+product_attributevalue_condition_new=index
+data_set.append({
+        "model": "attribute.attributevalue",
+        "pk": product_attributevalue_condition_new,
+        "fields": {
+        "sort_order": 0,
+        "name": "Καινούριο",
+        "value": "",
+        "slug": "new",
+        "attribute": attribute_attribute_condition
+    }
+    }
+)
+index = index + 1
+product_attributevalue_condition_used=index
+data_set.append({
+        "model": "attribute.attributevalue",
+        "pk": product_attributevalue_condition_used,
+        "fields": {
+        "sort_order": 0,
+        "name": "Μεταχειρισμένο",
+        "value": "",
+        "slug": "used",
+        "attribute": attribute_attribute_condition
+    }
+    }
+)
 # index = index + 1
 # attribute_attributevariant=index
 # data_set.append({
@@ -373,7 +430,7 @@ for i in car_data['car']:
             "type": "paragraph"
             })
 
-
+    image_list =list(map(lambda x: "zenone/"+x[x.rfind('/')+1:], i["image"])	)
     data_set.append({
     "model": "product.product",
     "pk": product_product,
@@ -389,6 +446,7 @@ for i in car_data['car']:
       },
       "seo_title": "",
       "seo_description": i["name"],
+      "images": image_list,
     #   "description_plaintext": i["description"],
       "product_type": product_producttype,
       "name": i["name"],
@@ -402,6 +460,27 @@ for i in car_data['car']:
       "weight": "0.0:kg"
     }
     })
+
+    # create product images
+
+    # index = index + 1
+    # product_productimage=index
+    # image_list =list(map(lambda x: "zenone/"+x[x.rfind('/')+1:], i["image"])	)
+    # data_set.append(
+    #   {
+    # "model": "product.productimage",
+    # "pk": product_productimage,
+    # "fields": {
+    #   "sort_order": 0,
+    #   "product": product_product,
+    #   "image": image_list,
+    #   "ppoi": "0.5x0.5",
+    #   "alt": ""
+    # }
+    # }
+    # )
+
+#  assign product to channel
     index = index + 1
     product_productchannellisting=index
     data_set.append(
@@ -419,6 +498,8 @@ for i in car_data['car']:
       }
     }
     )
+
+    # create product variant
     sku=sku+1
     index = index + 1
     product_productvariant=index
@@ -438,6 +519,8 @@ for i in car_data['car']:
     }    
     }
     )
+
+    # assign attributes to product
     index = index + 1
     product_assignedproductattribute_fits=index
     fits_attr=[]
@@ -469,6 +552,8 @@ for i in car_data['car']:
             "values": manufacturer_attr
         }    
     })
+
+
 
     index = index + 1
     product_attributevalue_model=index
@@ -525,6 +610,22 @@ for i in car_data['car']:
             "values": [product_attributevalue_car_url]
         }    
     })
+
+    index = index + 1
+    product_assignedproductattribute_condition=index
+    condition = product_attributevalue_condition_new if i["condition"] == "Καινούριο" else product_attributevalue_condition_used
+    print(condition)
+    data_set.append(      
+        {
+        "model": "attribute.assignedproductattribute",
+        "pk": product_assignedproductattribute_condition,
+        "fields": {
+            "product": product_product,
+            "assignment": product_attributeproduct_condition,
+            "values": [condition]
+        }    
+    })
+
 
 
 #     index = index + 1

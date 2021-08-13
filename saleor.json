@@ -31,7 +31,7 @@
 		"model": "product.collectionchannellisting",
 		"pk": 101,
 		"fields": {
-			"publication_date": "2021-08-12",
+			"publication_date": "2021-08-13",
 			"is_published": true,
 			"collection": 100,
 			"channel": 1
@@ -831,28 +831,52 @@
 		}
 	},
 	{
-		"model": "attribute.attributeproduct",
+		"model": "attribute.attribute",
 		"pk": 142,
-		"fields": { "sort_order": null, "attribute": 140, "product_type": 137 }
+		"fields": {
+			"private_metadata": {},
+			"metadata": {},
+			"slug": "condition",
+			"name": "\u039a\u03b1\u03c4\u03ac\u03c3\u03c4\u03b1\u03c3\u03b7",
+			"type": "product-type",
+			"input_type": "dropdown",
+			"value_required": true,
+			"is_variant_only": false,
+			"visible_in_storefront": true,
+			"filterable_in_storefront": true,
+			"filterable_in_dashboard": false,
+			"storefront_search_position": 0,
+			"available_in_grid": true
+		}
 	},
 	{
 		"model": "attribute.attributeproduct",
 		"pk": 143,
-		"fields": { "sort_order": null, "attribute": 138, "product_type": 137 }
+		"fields": { "sort_order": null, "attribute": 140, "product_type": 137 }
 	},
 	{
 		"model": "attribute.attributeproduct",
 		"pk": 144,
-		"fields": { "sort_order": null, "attribute": 139, "product_type": 137 }
+		"fields": { "sort_order": null, "attribute": 138, "product_type": 137 }
 	},
 	{
 		"model": "attribute.attributeproduct",
 		"pk": 145,
+		"fields": { "sort_order": null, "attribute": 139, "product_type": 137 }
+	},
+	{
+		"model": "attribute.attributeproduct",
+		"pk": 146,
 		"fields": { "sort_order": null, "attribute": 141, "product_type": 137 }
 	},
 	{
+		"model": "attribute.attributeproduct",
+		"pk": 147,
+		"fields": { "sort_order": null, "attribute": 142, "product_type": 137 }
+	},
+	{
 		"model": "attribute.attributevalue",
-		"pk": 146,
+		"pk": 148,
 		"fields": {
 			"sort_order": 0,
 			"name": "Ducati PANIGALE",
@@ -863,7 +887,7 @@
 	},
 	{
 		"model": "attribute.attributevalue",
-		"pk": 147,
+		"pk": 149,
 		"fields": {
 			"sort_order": 0,
 			"name": "Honda CBR 1000RR 2020",
@@ -874,7 +898,7 @@
 	},
 	{
 		"model": "attribute.attributevalue",
-		"pk": 148,
+		"pk": 150,
 		"fields": {
 			"sort_order": 0,
 			"name": "Honda Fireblade 2020",
@@ -885,7 +909,7 @@
 	},
 	{
 		"model": "attribute.attributevalue",
-		"pk": 149,
+		"pk": 151,
 		"fields": {
 			"sort_order": 0,
 			"name": "Honda CBR 1000RR-R 2020",
@@ -896,7 +920,7 @@
 	},
 	{
 		"model": "attribute.attributevalue",
-		"pk": 150,
+		"pk": 152,
 		"fields": {
 			"sort_order": 0,
 			"name": "MWR",
@@ -907,7 +931,7 @@
 	},
 	{
 		"model": "attribute.attributevalue",
-		"pk": 151,
+		"pk": 153,
 		"fields": {
 			"sort_order": 0,
 			"name": "MWR2",
@@ -917,8 +941,30 @@
 		}
 	},
 	{
+		"model": "attribute.attributevalue",
+		"pk": 154,
+		"fields": {
+			"sort_order": 0,
+			"name": "\u039a\u03b1\u03b9\u03bd\u03bf\u03cd\u03c1\u03b9\u03bf",
+			"value": "",
+			"slug": "new",
+			"attribute": 142
+		}
+	},
+	{
+		"model": "attribute.attributevalue",
+		"pk": 155,
+		"fields": {
+			"sort_order": 0,
+			"name": "\u039c\u03b5\u03c4\u03b1\u03c7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03ad\u03bd\u03bf",
+			"value": "",
+			"slug": "used",
+			"attribute": 142
+		}
+	},
+	{
 		"model": "product.product",
-		"pk": 152,
+		"pk": 156,
 		"fields": {
 			"private_metadata": {},
 			"metadata": {
@@ -931,6 +977,7 @@
 			},
 			"seo_title": "",
 			"seo_description": "\u03a6\u03af\u03bb\u03c4\u03c1\u03bf MWR \"RACING\" \u03b3\u03b9\u03b1 Ducati 899/959/1199/1299 Panigale Complete kit(Racing Airfilter&holder) for race use only, MC-022-12-R",
+			"images": ["zenone/9612717_0_z.jpg"],
 			"product_type": 137,
 			"name": "\u03a6\u03af\u03bb\u03c4\u03c1\u03bf MWR \"RACING\" \u03b3\u03b9\u03b1 Ducati 899/959/1199/1299 Panigale Complete kit(Racing Airfilter&holder) for race use only, MC-022-12-R",
 			"slug": "philtro-mwr-racing-gia-ducati-899-959-1199-1299-panigale-complete-kit-racing-airfilter-holder-for-race-use-only-mc-022-12-r",
@@ -1072,26 +1119,26 @@
 	},
 	{
 		"model": "product.productchannellisting",
-		"pk": 153,
+		"pk": 157,
 		"fields": {
-			"publication_date": "2021-08-12",
+			"publication_date": "2021-08-13",
 			"is_published": true,
-			"product": 152,
+			"product": 156,
 			"channel": 1,
 			"visible_in_listings": true,
-			"available_for_purchase": "2021-08-12",
+			"available_for_purchase": "2021-08-13",
 			"currency": "EUR"
 		}
 	},
 	{
 		"model": "product.productvariant",
-		"pk": 154,
+		"pk": 158,
 		"fields": {
 			"private_metadata": {},
 			"metadata": {},
 			"sku": 546451997,
 			"name": "default",
-			"product": 152,
+			"product": 156,
 			"track_inventory": true,
 			"default": true,
 			"weight": "1.0:kg"
@@ -1099,51 +1146,56 @@
 	},
 	{
 		"model": "attribute.assignedproductattribute",
-		"pk": 155,
-		"fields": { "product": 152, "assignment": 142, "values": [146] }
+		"pk": 159,
+		"fields": { "product": 156, "assignment": 143, "values": [148] }
 	},
 	{
 		"model": "attribute.assignedproductattribute",
-		"pk": 156,
-		"fields": { "product": 152, "assignment": 143, "values": [150] }
+		"pk": 160,
+		"fields": { "product": 156, "assignment": 144, "values": [152] }
 	},
 	{
 		"model": "attribute.attributevalue",
-		"pk": 157,
+		"pk": 161,
 		"fields": {
 			"sort_order": 0,
 			"name": "MC-022-12-R",
 			"value": "",
-			"slug": "139_157",
+			"slug": "139_161",
 			"attribute": 139
 		}
 	},
 	{
 		"model": "attribute.assignedproductattribute",
-		"pk": 158,
-		"fields": { "product": 152, "assignment": 144, "values": [157] }
+		"pk": 162,
+		"fields": { "product": 156, "assignment": 145, "values": [161] }
 	},
 	{
 		"model": "attribute.attributevalue",
-		"pk": 159,
+		"pk": 163,
 		"fields": {
 			"sort_order": 0,
 			"name": "www.car.gr/d9612717",
 			"value": "",
-			"slug": "141_159",
+			"slug": "141_163",
 			"attribute": 141
 		}
 	},
 	{
 		"model": "attribute.assignedproductattribute",
-		"pk": 160,
-		"fields": { "product": 152, "assignment": 145, "values": [159] }
+		"pk": 164,
+		"fields": { "product": 156, "assignment": 146, "values": [163] }
+	},
+	{
+		"model": "attribute.assignedproductattribute",
+		"pk": 165,
+		"fields": { "product": 156, "assignment": 147, "values": [154] }
 	},
 	{
 		"model": "product.productvariantchannellisting",
-		"pk": 161,
+		"pk": 166,
 		"fields": {
-			"variant": 154,
+			"variant": 158,
 			"channel": 1,
 			"currency": "EUR",
 			"price_amount": "15.000",
@@ -1152,12 +1204,12 @@
 	},
 	{
 		"model": "product.collectionproduct",
-		"pk": 162,
-		"fields": { "sort_order": null, "collection": 100, "product": 152 }
+		"pk": 167,
+		"fields": { "sort_order": null, "collection": 100, "product": 156 }
 	},
 	{
 		"model": "product.product",
-		"pk": 163,
+		"pk": 168,
 		"fields": {
 			"private_metadata": {},
 			"metadata": {
@@ -1170,6 +1222,11 @@
 			},
 			"seo_title": "",
 			"seo_description": "\u03a6\u03af\u03bb\u03c4\u03c1\u03bf \u0391\u03ad\u03c1\u03bf\u03c2 MWR \"WSBK Racing\" \u03b3\u03b9\u03b1 Honda CBR 1000 RR-R Fireblade (2020-) MC-030-20/WSBK",
+			"images": [
+				"zenone/28089205_2_z.jpg",
+				"zenone/28089205_0_z.jpg",
+				"zenone/28089205_1_z.jpg"
+			],
 			"product_type": 137,
 			"name": "\u03a6\u03af\u03bb\u03c4\u03c1\u03bf \u0391\u03ad\u03c1\u03bf\u03c2 MWR \"WSBK Racing\" \u03b3\u03b9\u03b1 Honda CBR 1000 RR-R Fireblade (2020-) MC-030-20/WSBK",
 			"slug": "philtro-aeros-mwr-wsbk-racing-gia-honda-cbr-1000-rr-r-fireblade-2020-mc-030-20-wsbk",
@@ -1385,26 +1442,26 @@
 	},
 	{
 		"model": "product.productchannellisting",
-		"pk": 164,
+		"pk": 169,
 		"fields": {
-			"publication_date": "2021-08-12",
+			"publication_date": "2021-08-13",
 			"is_published": true,
-			"product": 163,
+			"product": 168,
 			"channel": 1,
 			"visible_in_listings": true,
-			"available_for_purchase": "2021-08-12",
+			"available_for_purchase": "2021-08-13",
 			"currency": "EUR"
 		}
 	},
 	{
 		"model": "product.productvariant",
-		"pk": 165,
+		"pk": 170,
 		"fields": {
 			"private_metadata": {},
 			"metadata": {},
 			"sku": 546451998,
 			"name": "default",
-			"product": 163,
+			"product": 168,
 			"track_inventory": true,
 			"default": true,
 			"weight": "1.0:kg"
@@ -1412,55 +1469,60 @@
 	},
 	{
 		"model": "attribute.assignedproductattribute",
-		"pk": 166,
+		"pk": 171,
 		"fields": {
-			"product": 163,
-			"assignment": 142,
-			"values": [147, 148, 149, 146]
+			"product": 168,
+			"assignment": 143,
+			"values": [149, 150, 151, 148]
 		}
 	},
 	{
 		"model": "attribute.assignedproductattribute",
-		"pk": 167,
-		"fields": { "product": 163, "assignment": 143, "values": [151] }
+		"pk": 172,
+		"fields": { "product": 168, "assignment": 144, "values": [153] }
 	},
 	{
 		"model": "attribute.attributevalue",
-		"pk": 168,
+		"pk": 173,
 		"fields": {
 			"sort_order": 0,
 			"name": "MC-030-20/WSBK",
 			"value": "",
-			"slug": "139_168",
+			"slug": "139_173",
 			"attribute": 139
 		}
 	},
 	{
 		"model": "attribute.assignedproductattribute",
-		"pk": 169,
-		"fields": { "product": 163, "assignment": 144, "values": [168] }
+		"pk": 174,
+		"fields": { "product": 168, "assignment": 145, "values": [173] }
 	},
 	{
 		"model": "attribute.attributevalue",
-		"pk": 170,
+		"pk": 175,
 		"fields": {
 			"sort_order": 0,
 			"name": "www.car.gr/d28089205",
 			"value": "",
-			"slug": "141_170",
+			"slug": "141_175",
 			"attribute": 141
 		}
 	},
 	{
 		"model": "attribute.assignedproductattribute",
-		"pk": 171,
-		"fields": { "product": 163, "assignment": 145, "values": [170] }
+		"pk": 176,
+		"fields": { "product": 168, "assignment": 146, "values": [175] }
+	},
+	{
+		"model": "attribute.assignedproductattribute",
+		"pk": 177,
+		"fields": { "product": 168, "assignment": 147, "values": [154] }
 	},
 	{
 		"model": "product.productvariantchannellisting",
-		"pk": 172,
+		"pk": 178,
 		"fields": {
-			"variant": 165,
+			"variant": 170,
 			"channel": 1,
 			"currency": "EUR",
 			"price_amount": "15.000",
@@ -1469,7 +1531,7 @@
 	},
 	{
 		"model": "product.collectionproduct",
-		"pk": 173,
-		"fields": { "sort_order": null, "collection": 100, "product": 163 }
+		"pk": 179,
+		"fields": { "sort_order": null, "collection": 100, "product": 168 }
 	}
 ]
